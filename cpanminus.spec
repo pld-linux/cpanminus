@@ -120,6 +120,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/auto/App/cpanminus/.packlist
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/App/cpanminus.pod
+# same as bindir/cpanm
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/App/cpanminus/fatscript.pm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
