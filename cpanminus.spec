@@ -110,6 +110,10 @@ done
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
+
+# strip pod, already in manual
+%{__sed} -i -e '/__END__/,$d' bin/cpanm
+
 %{__make}
 %{?with_tests:%{__make} test}
 
