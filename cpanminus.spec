@@ -108,6 +108,9 @@ for F in bin/cpanm lib/App/cpanminus/fatscript.pm; do
 	mv "${F}.stripped" "$F"
 done
 
+# strip remains of fatpack
+%{__sed} -i -e '/DO NOT EDIT/,/END OF FATPACK CODE/d' bin/cpanm
+
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 
