@@ -6,7 +6,7 @@
 Summary:	Get, unpack, build and install CPAN modules
 Name:		cpanminus
 Version:	1.7001
-Release:	1
+Release:	2
 License:	GPL+ or Artistic
 Group:		Development/Libraries
 Source0:	http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-%{name}-%{version}.tar.gz
