@@ -101,6 +101,8 @@ to shell scripting. When running, it requires only 10 MB of RAM.
 
 %prep
 %setup -q -n App-%{name}-%{version}
+
+%build
 # Unbundle fat-packed modules
 podselect lib/App/cpanminus.pm > lib/App/cpanminus.pod
 
@@ -113,7 +115,6 @@ done
 # strip remains of fatpack
 %{__sed} -i -e '/DO NOT EDIT/,/END OF FATPACK CODE/d' bin/cpanm
 
-%build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 
 # strip pod, already in manual
