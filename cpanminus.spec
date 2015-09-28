@@ -22,9 +22,6 @@ BuildRequires:	perl-modules
 BuildRequires:	perl-tools-pod
 BuildRequires:	perl-version
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-BuildRequires:	perl-modules
-%endif
 Requires:	perl(ExtUtils::Install) >= 1.46
 Requires:	perl(ExtUtils::MakeMaker) >= 6.58
 Requires:	perl-CPAN-DistnameInfo
@@ -34,7 +31,6 @@ Requires:	perl-Module-CPANfile
 Requires:	perl-Parse-PMFile
 Requires:	perl-YAML
 Requires:	perl-local-lib
-Requires:	perl-version
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
