@@ -5,14 +5,14 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Get, unpack, build and install CPAN modules
 Name:		cpanminus
-Version:	1.7001
-Release:	2
+Version:	1.7034
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Libraries
 Source0:	http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-%{name}-%{version}.tar.gz
-# Source0-md5:	4655c5903e2885085262cf5f15ff5ae3
+# Source0-md5:	d739e44f7dabca32231ffaf36ebfe647
 Source1:	http://pkgs.fedoraproject.org/cgit/perl-App-cpanminus.git/plain/fatunpack
-# Source1-md5:	c6c93648af22e2e47f94d391868cef06
+# Source1-md5:	c69ce04e198446d28e2aaa8ba3291542
 URL:		http://search.cpan.org/dist/App-cpanminus/
 BuildRequires:	%{_bindir}/podselect
 BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.30
@@ -51,6 +51,7 @@ BuildRequires:	perl(File::Temp)
 # Module::CPANfile not needed for compilation
 # Module::Metadata not needed for compilation
 BuildRequires:	perl(Parse::CPAN::Meta)
+BuildRequires:  perl(Parse::PMFile)
 # POSIX not needed for compilation
 # Safe not needed for compilation
 BuildRequires:	perl(String::ShellQuote)
@@ -72,7 +73,7 @@ Requires:	perl(CPAN::Meta::Prereqs)
 Requires:	perl(CPAN::Meta::YAML)
 Requires:	perl(Digest::SHA)
 Requires:	perl(ExtUtils::Install) >= 1.46
-Requires:	perl(ExtUtils::MakeMaker) >= 6.31
+Requires:	perl(ExtUtils::MakeMaker) >= 6.58
 Requires:	perl(ExtUtils::Manifest)
 # File::HomeDir is optional
 Requires:	perl(File::pushd)
@@ -86,6 +87,7 @@ Requires:	perl(Module::CPANfile)
 Requires:	perl(Module::CoreList)
 Requires:	perl(Module::Metadata)
 # Module::Signature is optional
+Requires:	perl(Parse::PMFile)
 Requires:	perl(version::vpp)
 # Win32 not used
 Requires:	perl(YAML)
@@ -135,7 +137,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes README LICENSE
 %attr(755,root,root) %{_bindir}/cpanm
 %{perl_vendorlib}/App/cpanminus.pm
 %{perl_vendorlib}/App/cpanminus
