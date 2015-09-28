@@ -16,11 +16,7 @@ Source1:	http://pkgs.fedoraproject.org/cgit/perl-App-cpanminus.git/plain/fatunpa
 URL:		http://search.cpan.org/dist/App-cpanminus/
 BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.30
 BuildRequires:	perl-String-ShellQuote
-BuildRequires:	perl-base
-BuildRequires:	perl-devel
-BuildRequires:	perl-modules
 BuildRequires:	perl-tools-pod
-BuildRequires:	perl-version
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl(ExtUtils::Install) >= 1.46
 Requires:	perl(ExtUtils::MakeMaker) >= 6.58
