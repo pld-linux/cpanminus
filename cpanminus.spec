@@ -53,9 +53,6 @@ done
 
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 
-# strip pod, already in manual
-%{__sed} -i -e '/__END__/,$d' bin/cpanm
-
 %{__make}
 %{?with_tests:%{__make} test}
 
@@ -63,6 +60,9 @@ done
 rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# strip pod, already in manual
+%{__sed} -i -e '/__END__/,$d' $RPM_BUILD_ROOT%{_bindir}/cpanm
 
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/auto/App/cpanminus/.packlist
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/App/cpanminus.pod
