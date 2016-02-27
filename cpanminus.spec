@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Get, unpack, build and install CPAN modules
 Name:		cpanminus
-Version:	1.7034
+Version:	1.7040
 Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Libraries
 Source0:	http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-%{name}-%{version}.tar.gz
-# Source0-md5:	d739e44f7dabca32231ffaf36ebfe647
+# Source0-md5:	8f8e43433f42e78d8c4374e1f0f55d31
 Source1:	http://pkgs.fedoraproject.org/cgit/perl-App-cpanminus.git/plain/fatunpack
 # Source1-md5:	c69ce04e198446d28e2aaa8ba3291542
 URL:		http://search.cpan.org/dist/App-cpanminus/
