@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 Summary:	Get, unpack, build and install CPAN modules
 Name:		cpanminus
 Version:	1.7040
